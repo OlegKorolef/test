@@ -40,7 +40,9 @@ if (!empty($_POST)) {
         && isset($info['path'])
     ) {
         Article_insert($info);
-        header('Location: /');
+        $host = $_SERVER['HTTP_HOST'];
+        $uri = rtrim(pathinfo($_SERVER['PHP_SELF'], PATHINFO_DIRNAME), '/\\');
+        header("Location: http://$host$uri/index.php");
         die;
     }
 }

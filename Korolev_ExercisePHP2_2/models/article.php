@@ -6,8 +6,7 @@ require_once __DIR__ . '/../functions/sql.php';
 abstract class Article {
     public $heading;
     public $path;
-//    abstract public function __construct();
-//    abstract public function Article_insert($heading, $path);
+    abstract public function __construct();
     abstract public function Article_getAll();
 }
 
@@ -16,12 +15,9 @@ class NewsArticle extends Article {
     public $day_;
     public $month_;
     public $year_;
-    public $a;
+    public $basis;
     public function __construct() {
-//    public function Connect() {
         sql_connect();
-//        mysql_connect('localhost', 'root', '');
-//        mysql_select_db('test');
     }
     public function Article_insert($id, $day_, $month_, $year_, $heading, $path) {
         $sql = "
@@ -46,6 +42,6 @@ class NewsArticle extends Article {
     }
     public function Article_getAll() {
         $sql = 'SELECT * FROM news ORDER BY id DESC';
-        return $this->a = sql_query($sql);
+        return $this->basis = sql_query($sql);
     }
 }

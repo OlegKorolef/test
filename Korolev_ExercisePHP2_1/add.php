@@ -41,8 +41,8 @@ if (!empty($_POST)) {
     ) {
         Article_insert($info);
         $host = $_SERVER['HTTP_HOST'];
-        $uri = rtrim(pathinfo($_SERVER['PHP_SELF'], PATHINFO_DIRNAME), '/\\');
-        header("Location: http://$host$uri/index.php");
+        $uri = pathinfo($_SERVER['PHP_SELF'], PATHINFO_DIRNAME);
+        header('Location: http://' . $host . $uri . '/index.php');
         die;
     }
 }

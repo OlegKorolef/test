@@ -8,6 +8,11 @@ class DB
         mysql_select_db('test');
     }
 
+    public function sql_exec($sql)
+    {
+        mysql_query($sql);
+    }
+
     public function queryAll($sql, $class = 'stdClass')
     {
         $res = mysql_query($sql);

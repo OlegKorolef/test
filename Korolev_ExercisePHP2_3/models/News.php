@@ -4,11 +4,14 @@ class News
     extends AbstractModel
 {
 
-    public $id;
-    public $title;
-    public $text;
+    public static $id;
+    public static $day_;
+    public static $month_;
+    public static $year_;
+    public static $heading;
+    public static $path;
 
-    protected static $table = 'news';
-    protected static $class = 'News';
+    protected static $table = 'news'; //таблица
+    protected static $class = 'News'; //объект для складирования результатов
 
 }

@@ -2,10 +2,14 @@
 <html>
 <head lang="ru">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Выбранная новость</title>
 </head>
 <body>
-<h1><?php echo $item->title; ?></h1>
-<div><?php echo $item->text; ?></div>
+<div>
+    <span><?php echo $item->day_ . '.' . $item->month_ . '.' . $item->year_; ?></span>
+    <span><a href="<?php echo '.' . $item->path; ?>"><?php echo $item->heading; ?></a></span>
+</div>
+<?php $_POST['ctrl'] = 'View'; $_POST['act'] = 'Input'; ?>
+<a href="index.php">На главную</a>
 </body>
 </html>

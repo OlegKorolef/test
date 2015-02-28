@@ -49,7 +49,7 @@ if (!empty($_POST)) {
 
         $host = $_SERVER['HTTP_HOST'];
         $uri = pathinfo($_SERVER['PHP_SELF'], PATHINFO_DIRNAME);
-        header('Location: http://' . $host . $uri . '/View.php');
+        header('Location: http://' . $host . $uri . '/index.php');
         die;
     }
 }

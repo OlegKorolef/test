@@ -25,7 +25,7 @@ class ViewController
 
     public function actionOne()
     {
-        $id = $_POST['id'];
+        $id = ($_POST['day_'] + $_POST['month_'] + $_POST['year_']);
         $item = News::getOne($id);
         $view = new View();
         $view->item = $item;

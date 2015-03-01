@@ -22,10 +22,20 @@
         Показать одну новость
     </label>
     <br>
-    <label>
-        Номер новости = день+месяц+год (при вставке и показе всех новостей не заполняется)
-        <input type="text" name="id">
-    </label>
+    <br>
+    <p>
+        Дата новости (при вставке и показе всех новостей не заполняется)
+    </p>
+    <label for="day_">День</label>
+    <input type="text" id="day_" name="day_">
+    <br>
+    <label for="month_">Месяц в цифровом формате</label>
+    <input type="text" id="month_" name="month_">
+    <br>
+    <label for="year_">Год</label>
+    <input type="text" id="year_" name="year_">
+    <br>
+    <br>
     <br>
     <input type="submit">
 </form>

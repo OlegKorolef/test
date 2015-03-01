@@ -8,7 +8,7 @@
 <?php foreach ($items as $item): ?>
     <div>
         <span><?php echo $item->day_ . '.' . $item->month_ . '.' . $item->year_; ?></span>
-        <span><a href="<?php echo __DIR__ . $item->path; ?>"><?php echo $item->heading; ?></a></span>
+        <span><a href="<?php echo '.' . $item->path; ?>"><?php echo $item->heading; ?></a></span>
     </div>
     <br><br>
 <?php endforeach; ?>

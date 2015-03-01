@@ -6,13 +6,13 @@ class ViewController
     public function actionInput()
     {
         $view = new View();
-        $view->display('form_input.php');
+        $view->display('form_input.html');
     }
 
     public function actionInsert()
     {
         $view = new View();
-        $view->display('form_insert.php');
+        $view->display('form_insert.html');
     }
 
     public function actionAll()

@@ -5,12 +5,12 @@ class ViewController
 
     public function actionInput()
     {
-        include '/../views/form_input.php';
+        include '/../views/form_input.html';
     }
 
     public function actionInsert()
     {
-        include '/../views/form_insert.php';
+        include '/../views/form_insert.html';
     }
 
     public function actionAll()

@@ -11,6 +11,7 @@ class DB
             $this->dbh = new PDO('mysql:dbname=t;host=localhost', 'root', '');
         }
         catch (PDOException $edb) {
+            //$view = new LogicError();
             $view = new View();
             $view->error = $edb->getMessage() . ' Ошибка 403';
             $view->display('error.php');

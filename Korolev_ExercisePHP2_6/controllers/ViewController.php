@@ -30,6 +30,7 @@ class ViewController
         if (empty($item)) {
             $e = new E404Exception('Ошибка 404');
             throw $e;
+            //$view = new LogicError();
         } else {
             $item = $item;
         }

@@ -1,5 +1,6 @@
 <?php
-class LogicError extends ErrorException
+class LogicError
+    extends ErrorException
 {
     public static function recordErr($filename, $date, $file, $line, $code, $mess)
     {

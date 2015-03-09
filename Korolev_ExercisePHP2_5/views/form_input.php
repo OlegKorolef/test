@@ -7,16 +7,28 @@
 <body>
 
 <h3>
-    <!--После успешного сохранения устанавливаем поле $id_0 и $heading-->
-    Последняя добавленная новость №<?php echo $item->id_0; ?>, заголовок: <?php echo $item->heading; ?>
+    <!--После успешного сохранения устанавливаем поле $id_0-->
+    Вы сейчас добавили новость №<?php echo $id_0; ?>
 </h3>
 
 <form action="index.php" method="post">
 
     <label>
         <input type="radio" name="act" value="Insert">
-        Вставка новости
+        Вставить новость
     </label>
+    <br>
+    <label>
+        <input type="radio" name="act" value="Update">
+        Редактировать новость
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="act" value="Delete">
+        Удалить новость
+    </label>
+    <br>
+    <br>
     <br>
 
 
@@ -62,24 +74,6 @@
     <br>
     <label for="year_">Год</label>
     <input type="text" id="year_" name="year_">
-    <br>
-    <br>
-    <br>
-
-
-    <label>
-        <input type="radio" name="act" value="Update">
-        Редактировать новость
-    </label>
-    <br>
-    <br>
-    <br>
-
-
-    <label>
-        <input type="radio" name="act" value="Delete">
-        Удалить новость
-    </label>
     <br>
     <br>
     <br>

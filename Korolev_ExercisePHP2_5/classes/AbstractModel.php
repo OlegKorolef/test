@@ -16,30 +16,48 @@ abstract class AbstractModel
         return $this->data[$k];
     }
 
+    public function __isset($k)
+    {
+        return isset($this->data[$k]);
+    }
+
     public static function findAll()
     {
-        $class = get_called_class();
         $sql = 'SELECT * FROM ' . static::$table . ' ORDER BY id DESC';
         $db = new DB();
-        $db->setClassName($class);
-        return $db->query($sql);
+        $db->setClassName(get_called_class());
+        $res = $db->query($sql);
+        if (!empty($res)) {
+            return $res;
+        }
+        return false;
     }
 
     public static function findOneByPk($id)
     {
         $sql = 'SELECT * FROM ' . static::$table . ' WHERE id=:id';
         $db = new DB();
-        return $db->query($sql, [':id' => $id])[0];
+        $db->setClassName(get_called_class());
+        $res = $db->query($sql, [':id' => $id])[0];
+        if (!empty($res)) {
+            return $res;
+        }
+        return false;
     }
 
-    public static function findByColumn($column, $value)
+    public static function findByColumn($column, $value) //findOneByColumn
     {
         $sql = 'SELECT * FROM ' . static::$table . ' WHERE ' . $column . '=:value';
         $db = new DB();
-        return $db->query($sql, [':value' => $value]);
+        $db->setClassName(get_called_class());
+        $res = $db->query($sql, [':value' => $value]);
+        if (!empty($res)) {
+            return $res;
+        }
+        return false;
     }
 
-    public function insert()
+    protected  function insert()
     {
         $cols = array_keys($this->data);
         $data = [];
@@ -55,19 +73,42 @@ abstract class AbstractModel
          ';
         $db = new DB();
         $db->execute($sql, $data);
+        $this->id_0 = $db->lastInsertId_0();
     }
 
-    public static function update($column, $value, $number)
+    protected function update()
     {
-        $sql = 'UPDATE ' . static::$table . ' SET ' . $column . '='.$value. ' WHERE id=' . $number;
+        $cols = [];
+        $data = [];
+        foreach ($this->data as $k => $v) {
+            $data[':' . $k] = $v;
+            if ('id_0' == $k) {
+                continue;
+            }
+            $cols[] = $k . '=:' . $k;
+        }
+        $sql = '
+            UPDATE ' . static::$table . '
+            SET ' . implode(', ', $cols) . '
+            WHERE id_0=:id_0
+        ';
         $db = new DB();
-        return $db->query($sql, [':id' => $number]);
+        $db->execute($sql, $data);
     }
 
-    public static function delete($number)
+    public function save()
     {
-        $sql = 'DELETE FROM ' . static::$table . ' WHERE id=:id';
+        if (!isset($this->id_0)) {
+            $this->insert();
+        } else {
+            $this->update();
+        }
+    }
+
+    public function delete($id_0)
+    {
+        $sql = 'DELETE FROM ' . static::$table . ' WHERE id_0=:id_0';
         $db = new DB();
-        return $db->query($sql, [':id' => $number]);
+        return $db->query($sql, [':id_0' => $id_0]);
     }
 }

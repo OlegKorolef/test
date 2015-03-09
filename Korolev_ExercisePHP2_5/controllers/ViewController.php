@@ -32,7 +32,7 @@ class ViewController
         $view->display('news/one.php');
     }
 
-    public function actionByColumn()
+    public function actionByColumn() //findOneByColumn
     {
         $column = $_POST['column'];
         $value = $_POST['value'];

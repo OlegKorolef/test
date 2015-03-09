@@ -5,7 +5,7 @@ class ViewController
 
     public function actionInput()
     {
-        include '/../views/form_input.html';
+        include '/../views/form_input.php';
     }
 
     public function actionInsert()

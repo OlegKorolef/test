@@ -1,5 +1,10 @@
 <?php
 
+namespace Applications\Classes;
+
+use Applications\Classes\LogicError as LogicError;
+use Applications\Classes\View as View;
+
 class DB
 {
     private $dbh;

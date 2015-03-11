@@ -1,5 +1,7 @@
 <?php
 
+namespace Applications\Classes;
+
 class File
 {
     public function file_upload($field)

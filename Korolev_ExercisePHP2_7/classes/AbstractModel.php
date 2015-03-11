@@ -1,5 +1,9 @@
 <?php
 
+namespace Applications\Classes;
+
+use Applications\Classes\DB as DB;
+
 abstract class AbstractModel
 {
     static protected $table;
@@ -93,6 +97,7 @@ abstract class AbstractModel
             WHERE id_0=:id_0
         ';
         $db->execute($sql, $data);
+        $this->id_0 = $db->lastInsertId_0();
     }
 
     public function save()

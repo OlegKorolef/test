@@ -2,10 +2,19 @@
 
 require_once __DIR__ . '/autoload.php';
 
-$ctrl = isset($_POST['ctrl']) ? $_POST['ctrl'] : 'View';
+use Applications\Classes\View as View;
+use Applications\Classes\LogicError as LogicError;
+
+//$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+//$pathPart = explode('/', $path);
+
+//$ctrl = !empty($pathPart[1]) ? ucfirst($pathPart[1]) : 'View';
+//$act = !empty($pathPart[2]) ? ucfirst($pathPart[2]) : 'Input';
+
+$ctrl = isset($_POST['ctrl']) ? $_POST['ctrl'] : 'View0';
 $act = isset($_POST['act']) ? $_POST['act'] : 'Input';
 
-$controllerClassName = $ctrl . 'Controller';
+$controllerClassName = 'Applications\\Controllers\\' . $ctrl;
 
 try {
     $controller = new $controllerClassName;

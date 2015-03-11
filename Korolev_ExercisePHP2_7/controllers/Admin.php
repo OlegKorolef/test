@@ -1,5 +1,12 @@
 <?php
 
+namespace Applications\Controllers;
+
+use Applications\Models\News as NewsModel;
+use Applications\Classes\File as File;
+use Applications\Classes\View as View;
+use Applications\Classes\E404_E403_Exception as E404_E403_Exception;
+
 class AdminController
 {
     public function actionSave()
@@ -17,11 +24,20 @@ class AdminController
         $article->path = $path;
         $article->save();
 
-        $id_0 = $article->id_0;
+        $id_0_0 = $article->id_0;
+        if (empty($id_0_0)) {
+            $e = new E404_E403_Exception('Ошибка 403');
+            throw $e;
+        } else {
+            $id_0 = $id_0_0;
+        }
 
         $view = new View();
         $view->id_0 = $id_0;
         $view->display('form_input.php');
+
+        //$mailer = new \PHPMailer();
+        //$mailer->send();
 
         $_POST['ctrl'] = 'View';
         $_POST['act'] = 'Input';
@@ -33,12 +49,12 @@ class AdminController
         $id_0 = $article->id_0 = $_POST['id_0'];
         $article->delete($id_0);
 
-        $items = NewsModel::findAll();
-        if (empty($items)) {
+        $items0 = NewsModel::findAll();
+        if (empty($items0)) {
             $e = new E404_E403_Exception('Ошибка 403');
             throw $e;
         } else {
-            $items = $items;
+            $items = $items0;
         }
         $view = new View();
         $view->items = $items;

@@ -1,0 +1,4 @@
+10-03-2015 19:03:11  C:\OpenServer\domains\test.local\Korolev_ExercisePHP2_6\classes\DB.php  в строке: 11 код ошибки:  1049  SQLSTATE[HY000] [1049] Unknown database 't'<br>
+10-03-2015 19:03:15  C:\OpenServer\domains\test.local\Korolev_ExercisePHP2_6\classes\DB.php  в строке: 11 код ошибки:  1049  SQLSTATE[HY000] [1049] Unknown database 't'<br>
+10-03-2015 19:03:26  C:\OpenServer\domains\test.local\Korolev_ExercisePHP2_6\classes\AbstractModel.php  в строке: 65 код ошибки:  0  Ошибка 403<br>
+10-03-2015 19:03:13  C:\OpenServer\domains\test.local\Korolev_ExercisePHP2_6\classes\AbstractModel.php  в строке: 65 код ошибки:  0  Ошибка 403<br>

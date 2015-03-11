@@ -1,6 +1,15 @@
 <?php
 
-class ViewController
+namespace Applications\Controllers;
+
+
+
+use Applications\Models\News as NewsModel;
+use Applications\Classes\View as View;
+use Applications\Classes\LogicError as LogicError;
+use Applications\Classes\E404_E403_Exception as E404_E403_Exception;
+
+class View0
 {
 
     public function actionInput()
@@ -26,12 +35,12 @@ class ViewController
     public function actionOne()
     {
         $id = ($_POST['day_'] + $_POST['month_'] + $_POST['year_']);
-        $item = NewsModel::findOneByPk($id);
-        if (empty($item)) {
+        $item0 = NewsModel::findOneByPk($id);
+        if (empty($item0)) {
             $e = new E404_E403_Exception('Ошибка 404');
             throw $e;
         } else {
-            $item = $item;
+            $item = $item0;
         }
         $view = new View();
         $view->item = $item;
@@ -71,7 +80,6 @@ class ViewController
         $logicError = new LogicError();
         $filename = './log.txt';
         $logicError->viewErr($filename);
-        //var_dump($logicError);die;
     }
 
 }

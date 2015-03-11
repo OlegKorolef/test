@@ -1,8 +1,8 @@
 <?php
 
-namespace Applications\Classes;
+namespace Applications\Classes1;
 
-use Applications\Classes\DB as DB;
+use Applications\Classes1\DB as DB;
 
 abstract class AbstractModel
 {

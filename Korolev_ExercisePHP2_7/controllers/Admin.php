@@ -3,11 +3,11 @@
 namespace Applications\Controllers;
 
 use Applications\Models\News as NewsModel;
-use Applications\Classes\File as File;
-use Applications\Classes\View as View;
-use Applications\Classes\E404_E403_Exception as E404_E403_Exception;
+use Applications\Classes1\File as File;
+use Applications\Classes1\View as View;
+use Applications\Classes1\E404_E403_Exception as E404_E403_Exception;
 
-class AdminController
+class Admin
 {
     public function actionSave()
     {
@@ -36,8 +36,8 @@ class AdminController
         $view->id_0 = $id_0;
         $view->display('form_input.php');
 
-        //$mailer = new \PHPMailer();
-        //$mailer->send();
+        $mailer = new \PHPMailer();
+        $mailer->send();
 
         $_POST['ctrl'] = 'View';
         $_POST['act'] = 'Input';

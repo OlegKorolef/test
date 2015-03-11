@@ -2,7 +2,7 @@
 
 namespace Applications\Models;
 
-use Applications\Classes\AbstractModel as AbstractModel;
+use Applications\Classes1\AbstractModel as AbstractModel;
 
 /**
  * Class NewsModel

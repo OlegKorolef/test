@@ -5,9 +5,9 @@ namespace Applications\Controllers;
 
 
 use Applications\Models\News as NewsModel;
-use Applications\Classes\View as View;
-use Applications\Classes\LogicError as LogicError;
-use Applications\Classes\E404_E403_Exception as E404_E403_Exception;
+use Applications\Classes1\View as View;
+use Applications\Classes1\LogicError as LogicError;
+use Applications\Classes1\E404_E403_Exception as E404_E403_Exception;
 
 class View0
 {

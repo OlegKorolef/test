@@ -1,9 +1,9 @@
 <?php
 
-namespace Applications\Classes;
+namespace Applications\Classes1;
 
-use Applications\Classes\LogicError as LogicError;
-use Applications\Classes\View as View;
+use Applications\Classes1\LogicError as LogicError;
+use Applications\Classes1\View as View;
 
 class DB
 {
@@ -13,9 +13,9 @@ class DB
     public function __construct()
     {
         try {
-            $this->dbh = new PDO('mysql:dbname=test;host=localhost', 'root', '');
+            $this->dbh = new \PDO('mysql:dbname=test;host=localhost', 'root', '');
         }
-        catch (PDOException $edb) {
+        catch (\PDOException $edb) {
 
             $logicError = new LogicError();
             $filename = './log.txt';
@@ -42,7 +42,7 @@ class DB
     {
         $sth = $this->dbh->prepare($sql);
         $sth->execute($params);
-        return $sth->fetchAll(PDO::FETCH_CLASS, $this->className);
+        return $sth->fetchAll(\PDO::FETCH_CLASS, $this->className);
     }
 
     public function execute($sql, $params=[])

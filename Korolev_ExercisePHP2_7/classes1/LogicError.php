@@ -1,6 +1,6 @@
 <?php
 
-namespace Applications\Classes;
+namespace Applications\Classes1;
 
 class LogicError
     extends ErrorException

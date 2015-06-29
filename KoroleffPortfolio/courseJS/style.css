@@ -1,0 +1,200 @@
+#game
+{	
+	margin: 0 auto;
+	width: 625px;
+	font-size: 14px;
+	font-family: sans-serif;
+}
+
+#curtain
+{  
+	position: absolute;	
+	display: block;
+	margin: 0 auto;
+	width: 625px;
+	height: 465px;
+	background: url(curtain.gif);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	outline: 4px solid white; /* гасим обводку wrapper для IE9 */
+	z-index: 2;
+}
+
+.wrapper
+{
+	width: 625px;
+	height: 400px;
+	overflow: hidden;
+	background-color: #cbeba0;
+	outline: 4px solid #999;
+	outline-offset: -4px;
+}
+
+#matrix1
+{
+	float: left;	
+	width: 400px;	
+}
+
+#matrix1 .cell
+{
+	float: left;
+	width: 20px;
+	height: 20px;	
+	outline: 1px solid #999;
+	outline-offset: -1px;
+	background-color: #cbeba0;
+}
+
+#matrix1 .on
+{
+	background-color: red;
+}
+
+#matrix1 .fruit
+{
+	background-color: yellow;
+}
+
+#matrix1 .bane
+{
+	background-color: black;
+}
+
+#filter
+{
+	float: left;	
+	width: 225px;	
+	height: 25%;	
+	border-bottom: 0;	
+	outline: 1px solid #999;
+	outline-offset: -1px;
+	background-color: #cbeba0;	
+}
+
+.ui-widget
+{
+	margin-left: 3px;
+	padding-top: 3px;	
+}
+
+#tags
+{	
+	width: 70%;
+	position: relative;	
+}
+
+button
+{	
+	position: relative;
+	box-sizing: border-box;
+	width: 47%;
+}
+
+#oKpersons
+{	
+	width: 22%;
+}
+
+#result
+{
+	float: left;	
+	width: 225px;	
+	height: 75%;	
+	outline: 1px solid #999;
+	outline-offset: -1px;
+	background-color: #cbeba0;
+}
+
+#result1
+{
+	margin-top: 20px;
+	margin-left: 50px;
+}
+
+#prop
+{
+	height: 65px;
+}
+
+.textCenter
+{
+	text-align: center;
+}
+
+#helpSnake
+{	
+	width: 5%;
+	height: 5%;
+	border: 1px solid #999;
+	background-color: red;
+}
+
+#helpFruit
+{	
+	width: 5%;
+	height: 5%;
+	border: 1px solid #999;	
+	background-color: yellow;
+}
+
+#helpBane
+{	
+	width: 5%;
+	height: 5%;	
+	background-color: black;
+}
+
+#amount
+{
+	width: 10%;
+}
+
+#menu
+{
+	position: relative;    
+	margin: 0 auto;
+	width: 270px;	
+}
+
+.form
+{
+	position: relative;
+	margin: 0 auto;
+	width: 235px;
+	height: 25px;	
+}
+
+.left
+{
+	float: left;
+}
+
+.right
+{	
+	float: right;
+}
+
+#name
+{
+	width: 92px;
+}
+
+#count
+{	
+	width: 92px;
+	height: 18px;
+	border: 1px solid #999;
+}
+
+#menu1
+{
+	margin: 0 auto;
+	width: 340px;	
+}
+
+#screenMessages
+{
+	margin: 0 auto;
+	width: 180px;	
+}

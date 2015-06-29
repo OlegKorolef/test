@@ -1,0 +1,10 @@
+18-06-2015 15:06:37  C:\OpenServer\domains\test.local\KoroleffPortfolio\coursePHP\controllers\ViewCont.php  в строке: 38 код ошибки:  0  Ошибка 404 - ничего нет по указанным данным!<br>
+18-06-2015 15:06:01  C:\OpenServer\domains\test.local\KoroleffPortfolio\coursePHP\controllers\ViewCont.php  в строке: 55 код ошибки:  0  Ошибка 404 - ничего нет по указанным данным!<br>
+18-06-2015 15:06:21  C:\OpenServer\domains\test.local\KoroleffPortfolio\coursePHP\controllers\Admin.php  в строке: 26 код ошибки:  0  Ошибка 400 - не заполнены данные!<br>
+18-06-2015 15:06:17  C:\OpenServer\domains\test.local\KoroleffPortfolio\coursePHP\controllers\Admin.php  в строке: 73 код ошибки:  0  Ошибка 400 - не заполнены данные!<br>
+18-06-2015 16:06:35  C:\OpenServer\domains\test.local\KoroleffPortfolio\coursePHP\classes\DB.php  в строке: 13 код ошибки:  1049  SQLSTATE[HY000] [1049] Unknown database 'test1' Ошибка 403 - нет соединения с базой данных!<br>
+18-06-2015 16:06:10  C:\OpenServer\domains\test.local\KoroleffPortfolio\coursePHP\classes\DB.php  в строке: 13 код ошибки:  1049  SQLSTATE[HY000] [1049] Unknown database 'test1' Ошибка 403 - нет соединения с базой данных!<br>
+21-06-2015 19:06:23  C:\OpenServer\domains\test.local\KoroleffPortfolio\coursePHP\classes\DB.php  в строке: 13 код ошибки:  1049  SQLSTATE[HY000] [1049] Unknown database 'test1' Ошибка 403 - нет соединения с базой данных!<br>
+22-06-2015 21:06:26  C:\OpenServer\domains\test.local\KoroleffPortfolio\coursePHP\controllers\Admin.php  в строке: 30 код ошибки:  0  Ошибка 400 - не заполнены данные!<br>
+23-06-2015 19:06:08  C:\OpenServer\domains\test.local\KoroleffPortfolio\coursePHP\controllers\Admin.php  в строке: 30 код ошибки:  0  Ошибка 400 - не заполнены данные!<br>
+23-06-2015 19:06:54  C:\OpenServer\domains\test.local\KoroleffPortfolio\coursePHP\controllers\Admin.php  в строке: 30 код ошибки:  0  Ошибка 400 - не заполнены данные!<br>

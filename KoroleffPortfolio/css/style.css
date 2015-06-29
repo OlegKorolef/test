@@ -1,0 +1,96 @@
+.myFon {
+    background-image: url(../wallpaper.jpg), url(../fon.jpg);
+    background-position: 100% 0, 100% 0;
+    background-repeat: no-repeat, repeat;    
+    -webkit-background-size: 180%, 180%; /* Safari 3.1+ и Chrome 4.0+ */
+    -moz-background-size: 180%, 180%; /* Firefox 3.6+ */
+    -o-background-size: 180%, 180%; /* Opera 9.6+ */
+    background-size: 180%, 180%; /* Современные браузеры */
+}
+#face {
+    background-image: url(../avatar.png);
+    background-size: 100%;
+    background-repeat: no-repeat;       
+    width: 150px;
+    height: 185px;    
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.requisitions {
+    margin: 0 auto;
+    padding: 1%;
+    color: rgba(6, 80, 70, 0.8);
+    text-align: center;
+}
+/* font-family: "LobsterRegular"; */
+@font-face {
+    font-family: "LobsterRegular";
+    src: url("../fonts/LobsterRegular/LobsterRegular.eot");
+    src: url("../fonts/LobsterRegular/LobsterRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/LobsterRegular/LobsterRegular.woff") format("woff"),
+    url("../fonts/LobsterRegular/LobsterRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+#name {    
+    font-family: LobsterRegular;
+    font-size: 375%;        
+}
+#eMail {   
+    font-size: 185%;    
+}
+.banner {
+    background-image: url(../mark-fon.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 1px;
+    width: 240px;
+    height: 240px;    
+    cursor: pointer;
+}
+a {
+    color: #000; /* Цвет ссылок */
+    text-decoration: none !important; /* Запрет подчеркивания ссылок */
+}
+a:active {
+    color: #000; /* Цвет активных ссылок */
+    text-decoration: none !important; /* Запрет подчеркивания активных ссылок */
+}
+a:visited {
+    color: #000; /* Цвет посещенных ссылок */
+    text-decoration: none !important; /* Запрет подчеркивания посещенных ссылок */
+}
+.banner:hover {
+    box-shadow: 0 0 0 10px rgba(204, 204, 204, 0.6);
+}
+.bannerContents {
+    background-size: 100%;
+    background-repeat: no-repeat;    
+    margin: 10px;   
+    width: 220px;
+    height: 178px;
+}
+.inscription {
+    font-size: 110%;
+    font-family: sans-serif;
+    font-style: italic;
+    text-align: center;
+}
+#givros {
+    background-image: url(../givros/givros.jpg);        
+}
+#courseHTML-CSS {
+    background-image: url(../courseHTML-CSS/ridik.jpg);        
+}
+#coursePHP {
+    background-image: url(../coursePHP/safePHP.jpg);
+    background-position: 0 30%;
+}
+#courseJS {
+    background-image: url(../courseJS/curtain.gif);    
+}
+#courseHTML5-CSS3 {
+    background-image: url(../courseHTML5-CSS3/notePad.jpg);        
+}

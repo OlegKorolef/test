@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>notepadWebStorage</title>
+
+    <!-- Bootstrap -->    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">    	
+    <!-- My style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  </head>
+  <body>
+
+    <pre id="head">@ ИНТЕРНЕТ - БЛОКНОТ @</pre>
+    <div class="container-fluid">	  	
+      <div class="row">
+        <div class="col-sm-2 lateralMenu"></div>
+        <div class="col-sm-10">
+          <div class="row noBorderTopRight">
+            <div class="col-xs-12 horizontalMenuTop">
+              <button type="button" class="btn btn-info" id="bold">
+                <span class="glyphicon glyphicon-bold"></span>
+              </button>
+              <button type="button" class="btn btn-info" id="italic">
+                <span class="glyphicon glyphicon-italic"></span>
+              </button>
+              <button type="button" class="btn btn-info" id="fontSize3">
+                <span class="glyphicon glyphicon-text-height"></span>&nbsp;3
+              </button>
+              <button type="button" class="btn btn-info" id="fontSize5">
+                <span class="glyphicon glyphicon-text-height"></span>&nbsp;5
+              </button>
+              <button type="button" class="btn btn-info" id="fontSize7">
+                <span class="glyphicon glyphicon-text-height"></span>&nbsp;7
+              </button>
+              <button type="button" class="btn btn-info" id="red">
+                <span class="glyphicon glyphicon-fire"></span>
+              </button>
+              <button type="button" class="btn btn-info" id="green">
+                <span class="glyphicon glyphicon-tree-conifer"></span>
+              </button>
+              <button type="button" class="btn btn-info" id="insertOrderedList">
+                <span class="glyphicon glyphicon-list"></span>
+              </button>
+            </div>
+          </div>
+          <div class="row input-group noBorderTopRight">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-tower"></span></span>
+            <input type="text" class="form-control" placeholder="Заголовок" id="heading">
+          </div>
+          <div class="row noBorderTopRight">
+            <div contentEditable="true" class="col-xs-12 windowEntering"></div>
+          </div>
+          <div class="row noBorderTopRightBottom">
+            <div class="col-sm-4 horizontalMenuBottom borderRight">               
+               <button type="button" class="btn btn-success center-block" id="save">СОХРАНИТЬ</button>               
+            </div>
+            <div class="col-sm-4 horizontalMenuBottom borderRight">
+               <button type="button" class="btn btn-warning center-block" id="beginning">НОВАЯ ЗАМЕТКА</button>
+            </div>
+            <div class="col-sm-4 horizontalMenuBottom">
+               <button type="button" class="btn btn-danger center-block" id="clean">ОЧИСТИТЬ ПАМЯТЬ</button>
+            </div>
+          </div>
+        </div>
+      </div>      
+	  </div>
+    <pre id="lsData"></pre>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <script src="modernizr-2.8.3.min.js"></script>
+    <script src="my.js"></script>
+
+  </body>
+</html>
